@@ -10,15 +10,25 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            Text("Tic Tac Toe")
+                .font(.title)
+                .bold()
+            LazyVGrid(columns: Array(repeating: GridItem(.fixed(120)), count: 3)) {
+                Text("X")
+                Text("X")
+                Text("X")
+                Text("X")
+                Text("X")
+                Text("X")
+                Text("X")
+                Text("X")
+                Text("X")
+            }
+            .preferredColorScheme(.dark)
         }
-        .padding()
     }
 }
+    #Preview {
+        ContentView()
+    }
 
-#Preview {
-    ContentView()
-}
