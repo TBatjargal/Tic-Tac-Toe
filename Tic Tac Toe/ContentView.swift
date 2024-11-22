@@ -15,9 +15,15 @@ struct ContentView: View {
                 .bold()
             LazyVGrid(columns: Array(repeating: GridItem(.fixed(120)), count: 3)) {
                 ForEach(0..<9) { index in
+                    ZStack {
                     Color.blue
-                        .frame(width: 120, height: 120, alignment: .center)
-                    .cornerRadius(130)}
+                    Text("X")
+                        .font(.system(size: 90))
+                        .fontWeight(.heavy)
+                }
+                .frame(width: 120, height: 120, alignment: .center)
+                .cornerRadius(130)
+            }
                 ForEach(0..<9) { index in}
                 ForEach(0..<9) { index in}
                 ForEach(0..<9) { index in}
